@@ -26,3 +26,33 @@ package cars
 func CalculateWorkingCarsPerHour(productionRate int, successRate float64) float64 {
     return((successRate / 100 ) * float64(productionRate)) 
 }
+
+
+
+
+// Task 2
+// Calculate the number of working cars produced per minute
+
+// Implement a function that takes in the number of cars produced per hour and the success rate and calculates how many cars are successfully produced each minute:
+
+// rate := CalculateWorkingCarsPerMinute(1105, 90)
+// // Output: 16
+// Note: the return value should be an int.
+
+
+// Calculate the number of working cars produced per minute
+// Start by calculating the production of successful cars per hour. For this, you can use the CalculateProductionRatePerHour function you made from the previous step.
+
+// Knowing the production per hour of cars, you can get the production per minute by dividing the production per hour by 60 (the number of minutes in an hour).
+
+// Remember to cast the result to an int.
+
+
+// CalculateWorkingCarsPerMinute calculates how many working cars are
+// produced by the assembly line every minute
+func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int {
+    return((int(successRate / 100 ) * productionRate) / 60 )    
+}
+
+
+
