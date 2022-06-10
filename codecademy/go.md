@@ -46,6 +46,8 @@ or
 ## Go Compiler
 As a compiled language, Go does not run until its source file is processed through a separate software called a compiler to produce a final executable program. The Go compiler can be accessed on the command line via a generic command such as:
 
+The purpose of Go Compiler is to translate Go code into binary code that computers understand.
+
 `go <command> [arguments]`
 
 

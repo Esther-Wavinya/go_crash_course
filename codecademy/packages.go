@@ -30,3 +30,33 @@ func main() {
 
 // Invoking Functions
 // Normally when we write functions, you need to write code to invoke them, otherwise they are unused. However, the main function is different if it resides in the main package.
+
+// Importing Multiple Packages
+// Previously, we imported a single package, fmt. This package is useful but it is only one in a list of many included with Go.
+
+// The standard packages are so useful that you will often use multiple packages in each .go file.
+
+// Importing Multiple Packages
+// To import multiple packages, we can add multiple import statements:
+
+// import "package1"
+// import "package2"
+// Or use a single import with parentheses:
+
+// import (
+//   "package1"
+//   "package2"
+// )
+// Package Aliases
+// We can also provide an alias to a package by specifying an alias name before the package name.
+
+// import (
+//   p1 "package1"
+//   "package2"
+// )
+// In the example above we’ve aliased package1 as p1 and now we can call functions from package1 by using p1 like:
+
+// p1.SampleFunc()
+// Instead of:
+
+// package1.SampleFunc()
