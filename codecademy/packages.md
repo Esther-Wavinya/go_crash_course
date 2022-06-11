@@ -11,13 +11,15 @@ Let’s focus on the first line package main. This line is called a package decl
 ## Import Statement
 Then we have an import statement, import "fmt". The import keyword allows us to use code from other packages, in this case the Println function from the fmt package. Note how the package name is enclosed with double quotes ".
 
-`package main`
+```
+package main
 
-`import "fmt"`
+import "fmt"
 
-`func main() {
+func main() {
 	fmt.Println("Hello World")
-}`
+}
+```
 
 ## main Function
 We use the func keyword to declare the Go function main:
@@ -42,22 +44,28 @@ The standard packages are so useful that you will often use multiple packages in
 ## Importing Multiple Packages
 To import multiple packages, we can add multiple import statements:
 
-`import "package1"`
-`import "package2"`
+```
+import "package1"
+import "package2"
+```
 Or use a single *import* with parentheses:
 
-` import (
+```
+ import (
     "package1"
     "package2"
-)`
+)
+```
 
 ## Package Aliases
 We can also provide an alias to a package by specifying an alias name before the package name.
 
-`import (
+```
+import (
    p1 "package1"
    "package2"
- )`
+ )
+ ```
 
 In the example above we’ve aliased package1 as p1 and now we can call functions from package1 by using p1 like:
 
@@ -81,15 +89,16 @@ This line will print the current time using both the fmt and time packages.
 
 4.Run the program using the command line. Look at the time printed out!
 
-`package main`
+```
+package main
+import "fmt"
+import t "time"
 
-`import "fmt"
-import t "time"`
-
-`func main() {
+func main() {
 	fmt.Println("Hello World")
   fmt.Println(t.Now())
-}`
+}
+```
 
 
 ## Comments
@@ -114,11 +123,13 @@ There are two types of comments in Go.
 ## Line Comments
 Line comments start with a // and the rest of the line is ignored by the compiler.
 
-`// This entire line is ignored by the compiler`
+```
+// This entire line is ignored by the compiler`
 
-`// fmt.Println("Does NOT print")`
+// fmt.Println("Does NOT print")
 
-`fmt.Println("This gets printed!")` `// This part gets ignored`
+fmt.Println("This gets printed!") // This part gets ignored
+```
 
 Note how you can add a // after the code, without affecting it.
 
@@ -126,11 +137,13 @@ Note how you can add a // after the code, without affecting it.
 Block comments can span multiple lines. They start with a /* and end with a */, enveloping everything inside:
 
 /*
-`This is ignored.`
+```
+This is ignored.
 
-`This is also ignored. `
+This is also ignored. 
 
-`fmt.Println("This WON'T print!")`
+fmt.Println("This WON'T print!")
+```
 */
 
 In the example above we’ve commented out all three lines using a block comment.

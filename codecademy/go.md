@@ -28,19 +28,23 @@ To find more information about a package’s function:
 ## Import Multiple Packages
 To import multiple packages in a Go file, use the *import* keyword followed by the *package name* enclosed in double-quotes and repeat this statement for every imported package on its own line, or write a single import keyword to import multiple packages, one per line, in enclosed parentheses, (…).
 
-`import "fmt"`
+```
+import "fmt"
 
-`import "math"`
+import "math"
 
-`import "time"`
+import "time"
+```
 
 or
 
-`import (
+```
+import (
   "fmt"
   "math"
   "time"
-)`
+)
+```
 
 
 ## Go Compiler
