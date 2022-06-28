@@ -291,3 +291,84 @@ func main() {
 0
 ```
 
+
+# Assigning Variables
+Variables are placeholder names that we use to refer to values that we intend to update over the course of our program. Updating our variable is also called *assigning* a value to a variable. In order to assign values to variables, we can use the assignment operator (`=`) followed by a value.
+
+```
+var kilometersToMars int32
+ 
+kilometersToMars = 62100000
+```
+
+In the example above, we first declare our variable using the `var` keyword, the name `kilometersToMars`, and its type `int32`. Then, we assign `62100000` to `kilometersToMars`. Now when we need to know how many kilometers it is to mars, we can access the value using `kilometersToMars`!
+
+Another way to assign our variable is:
+
+```
+var kilometersToMars int32 = 62100000
+```
+
+In our latest example, we declare `kilometersToMars`, assign the type (`int32`) and *initialize* it (assign a variable it’s first value) with a value of `62100000`. This syntax is helpful if we know exactly what type we want our variable to have and if we know what specific value to initialize it to.
+
+- In `main.go`, we’ve declared a `int` variable named numOfFlavors.
+Assign a value of `57` to `numOfFlavors`.
+```
+package main
+
+import "fmt"
+
+func main() {
+  var numOfFlavors int
+  // Assign a value for numOfFlavors below:
+  numOfFlavors = 57
+  
+  fmt.Println(numOfFlavors)
+  
+  // Declare flavorScale below:
+  
+  
+}
+```
+
+- Under the `print` statement, declare a variable named `flavorScale` that has a type of `float32` and initialize it with a value of `5.8` all on a single line.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+  var numOfFlavors int
+  // Assign a value for numOfFlavors below:
+  numOfFlavors = 57
+  
+  fmt.Println(numOfFlavors)
+  
+  // Declare flavorScale below:
+  var flavorScale float32 = 5.8
+  
+}
+```
+
+- To check that our flavorScale variable was correctly defined, print out `flavorScale‘s value` using `fmt.Println()`.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+  var numOfFlavors int
+  // Assign a value for numOfFlavors below:
+  numOfFlavors = 57
+  
+  fmt.Println(numOfFlavors)
+  
+  // Declare flavorScale below:
+  var flavorScale float32 = 5.8
+  
+  fmt.Println(flavorScale)
+}
+```
+
