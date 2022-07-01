@@ -600,10 +600,82 @@ func main() {
 }
 ```
 
-`Output` after running `main.go`
+`Output` after running `main.go`:
 
 ```
 0 0 
+```
+
+
+# Inferring Type
+There is a way to declare a variable without explicitly stating its type using the short declaration `:=` operator. We might use the `:=` operator if we know what value we want our variable to store when creating it. For instance:
+
+```
+nuclearMeltdownOccurring := true
+radiumInGroundWater := 4.521
+daysSinceLastWorkplaceCatastrophe := 0
+externalMessage := "Everything is normal. Keep calm and carry on."
+```
+
+Above, we were able to define a `bool`, a `float`, an `int`, and a `string` without specifying the type. We used the `:=` to create a variable and infer its type based on the value provided. Floats created in this way are of type `float64`. Integers created in this way are either `int32` or `int64`.
+
+
+Go also offers a separate syntax to declare a variable and infer its type. We could’ve written the same code from above as:
+
+```
+var nuclearMeltdownOccurring = true
+var radiumInGroundWater = 4.521
+var daysSinceLastWorkplaceCatastrophe = 0
+var externalMessage = "Everything is normal. Keep calm and carry on."
+```
+
+Notice, in the second example, that we used the `var` keyword and the `=` operator. In both examples, we’ve declared and initialized variables while leaving the Go compiler to infer the type of the value assigned.
+
+
+1. Create an integer called daysOnVacation using the := operator and assign it a number between 0 to 9.
+
+`main.go`
+
+```
+package main
+
+import "fmt"
+
+func main() {
+  // Define daysOnVacation using := below:
+  daysOnVacation := 6
+  
+  // Define hoursInDay using var and = below:
+  
+  
+  fmt.Println("You have spent", daysOnVacation * hoursInDay, "hours on vacation.")
+}
+```
+
+2. Create another integer called hoursInDay with a value of 24, this time using var and =.
+
+`main.go`
+
+```
+package main
+
+import "fmt"
+
+func main() {
+  // Define daysOnVacation using := below:
+  daysOnVacation := 6
+  
+  // Define hoursInDay using var and = below:
+  var hoursInDay = 24
+  
+  fmt.Println("You have spent", daysOnVacation * hoursInDay, "hours on vacation.")
+}
+```
+
+`Output` after running `main.go`:
+
+```
+You have spent 144 hours on vacation.
 ```
 
 
